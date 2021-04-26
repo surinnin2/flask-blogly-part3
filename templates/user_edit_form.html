@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Add User Form {% endblock %}
+
+{% block body %}
+<h3>Update User</h3>
+<form method="POST">
+    <div class="form-group">
+        <label for="first_name">Fist Name</label>
+        <input name="f_name" type="text" class="form-control" id="first_name" placeholder="enter name">
+    </div>
+    <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input name="l_name" type="text" class="form-control" id="last_name" placeholder="enter name">
+    </div>
+    <div class="form-group">
+        <label for="img_url">Img Url</label>
+        <input name="img_url" type="text" class="form-control" id="img_url" placeholder="Enter a valid img link">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
