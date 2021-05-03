@@ -7,9 +7,14 @@
 <hr>
 <p>{{post.content}}</p>
 <hr>
-<p>By {{user.first_name}} {{user.last_name}}</p>
-<p>Posted at {{post.created_at}}</p>
-<a href="/users/{{user.id}}" class="btn btn-secondary">Cancel</a>
+<p>Posted by {{user.first_name}} {{user.last_name}} at {{post.created_at}}</p>
+<hr>
+<h5>Tags: 
+    {% for tag in tags %}
+    <a href="/tags/{{tag.id}}" class="badge badge-info">{{tag.name}}</a>
+    {% endfor %}
+</h5>
+<a href="/users/{{user.id}}" class="btn btn-secondary">Back</a>
 <a href="/posts/{{post.id}}/edit" class="btn btn-primary">Edit</a>
 <a href="/posts/{{post.id}}/delete" class="btn btn-danger">Delete</a>
 {% endblock %}
